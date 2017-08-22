@@ -13,7 +13,9 @@
   (package-install 'use-package))
 
 (use-package graphene
-  :init (setq graphene-variable-pitch-font "PragmataPro")
+  :init (setq graphene-default-font "PragmataPro 9"
+              graphene-fixed-pitch-font "PragmataPro 9"
+              graphene-variable-pitch-font "Droid Sans 10")
   :ensure t)
 
 (use-package monokai-theme
@@ -24,3 +26,15 @@
   :bind (("C-x g" . magit-status)))
 
 (cua-mode t)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values (quote ((Tab-Width . 4)))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
