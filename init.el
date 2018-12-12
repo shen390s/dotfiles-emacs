@@ -2,7 +2,7 @@
 (require 'package)
 
 ;; Add the Melpa repository to the list of package sources
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/") t)
 
 ;; Initialise the package system.
 (package-initialize)
@@ -13,9 +13,9 @@
   (package-install 'use-package))
 
 (use-package graphene
-  :init (setq graphene-default-font "PragmataPro 9"
-              graphene-fixed-pitch-font "PragmataPro 9"
-              graphene-variable-pitch-font "Droid Sans 10")
+  :init (setq graphene-default-font "Inconsolata LGC"
+              graphene-fixed-pitch-font "Inconsolata LGC"
+              graphene-variable-pitch-font "Inconsolata LGC")
   :ensure t)
 
 (use-package monokai-theme
