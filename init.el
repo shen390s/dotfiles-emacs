@@ -1,4 +1,5 @@
 ;; Require Emacs' package functionality
+(setq package-user-dir (concat user-emacs-directory "/elpa"))
 (require 'package)
 
 ;; Add the Melpa repository to the list of package sources
