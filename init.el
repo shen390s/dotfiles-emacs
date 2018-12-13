@@ -25,6 +25,9 @@
   :ensure t
   :bind (("C-x g" . magit-status)))
 
+(use-package rainbow-delimiters
+	     :ensure t)
+
 (use-package haskell-mode
   :ensure t
   :init (progn (setq haskell-tags-on-save t)
@@ -45,6 +48,16 @@
   :mode (("README\\.md\\'" . gfm-mode)
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
+
+(use-package smartparens
+  :ensure t
+  :config (add-hook 'graphene-prog-mode-hook
+                    (lambda () (smartparens-mode))))
+
+(use-package rainbow-delimiters
+  :ensure t
+  :config (add-hook 'graphene-prog-mode-hook
+                    (lambda () (rainbow-delimiters-mode))))
 
 (cua-mode t)
 (setq tramp-default-method "ssh")
@@ -77,4 +90,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(add-to-list 'default-frame-alist '(font . "-unknown-PragmataPro-normal-normal-normal-*-12-*-*-*-*-0-iso10646-1"))
+(add-to-list 'default-frame-alist '(font . "-unknown-Inconsolata LGC-normal-normal-normal-*-12-*-*-*-*-0-iso10646-1"))
